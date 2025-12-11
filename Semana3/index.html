@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semana 3 - Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Semana 3 - Mi sitio</h1>
+    <nav>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="multimedia">
+      <h2>Imagen de ejemplo</h2>
+      <!-- ruta relativa a assets/img -->
+      <img src="assets/img/imagen1.jpg" alt="Descripción de la imagen" width="480">
+
+      <h2>Video de ejemplo</h2>
+      <!-- ruta relativa a assets/video -->
+      <video controls width="640">
+        <source src="assets/video/video1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label>Nombre:<br><input type="text" name="nombre" required></label><br>
+        <label>Correo:<br><input type="email" name="correo" required></label><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Mi Proyecto</p>
+  </footer>
+</body>
+</html>
