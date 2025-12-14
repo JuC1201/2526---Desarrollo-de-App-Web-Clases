@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-color: #0a66c2;
+  background-color: #7ab8f5ff;
   color: white;
   padding: 15px;
 }
@@ -17,7 +17,7 @@ header nav a {
 }
 
 h1, h2, h3 {
-  color: #6d0352ff;
+  color: #db0b0bff;
 }
 
 section {
@@ -55,7 +55,7 @@ form {
 }
 
 button {
-  background-color: #910753ff;
+  background-color: #e00b4bff;
   color: white;
   border: none;
   padding: 8px 15px;
