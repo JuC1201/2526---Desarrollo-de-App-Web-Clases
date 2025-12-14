@@ -1,45 +1,119 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Semana 3 - Demo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Semana 3 - Desarrollo de App Web</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
   <header>
-    <h1>Semana 3 - Mi sitio</h1>
+    <h1>Desarrollo de Aplicaciones Web</h1>
+    <p><strong>Semana 3</strong> – Uso de <em>HTML5 y CSS</em></p>
+
     <nav>
-      <a href="#multimedia">Multimedia</a>
+      <a href="#multimedia">Multimedia</a> |
+      <a href="#listas">Listas</a> |
+      <a href="#tabla">Tabla</a> |
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <main>
-    <section id="multimedia">
-      <h2>Imagen de ejemplo</h2>
-      <!-- ruta relativa a assets/img -->
-      <img src="assets/img/imagen1.jpg" alt="Descripción de la imagen" width="480">
 
-      <h2>Video de ejemplo</h2>
-      <!-- ruta relativa a assets/video -->
-      <video controls width="640">
-        <source src="assets/video/video1.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+    <section id="multimedia">
+      <h2>Contenido Multimedia</h2>
+
+      <article>
+        <h3>Imagen de ejemplo</h3>
+        <img src="assets/img/imagen1.jpg" alt="Imagen de ejemplo" width="300">
+      </article>
+
+      <article>
+        <h3>Video de ejemplo</h3>
+        <video controls width="400">
+          <source src="assets/video/video1.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </article>
+    </section>
+
+    <section id="listas">
+      <h2>Listas en HTML</h2>
+
+      <h3>Lista ordenada</h3>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+
+      <h3>Lista desordenada</h3>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>GitHub</li>
+        <li>Live Server</li>
+      </ul>
+    </section>
+
+    <section id="tabla">
+      <h2>Tabla de Tecnologías Web</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tecnología</th>
+            <th>Uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Estructura del sitio</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Diseño y estilos</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Interactividad</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="contacto">
-      <h2>Contacto</h2>
+      <h2>Formulario de Contacto</h2>
+
       <form>
-        <label>Nombre:<br><input type="text" name="nombre" required></label><br>
-        <label>Correo:<br><input type="email" name="correo" required></label><br>
+        <label>
+          Nombre:<br>
+          <input type="text" name="nombre" required>
+        </label><br><br>
+
+        <label>
+          Correo electrónico:<br>
+          <input type="email" name="correo" required>
+        </label><br><br>
+
         <button type="submit">Enviar</button>
       </form>
     </section>
+
+    <section>
+      <h2>Enlace externo</h2>
+      <a href="https://www.w3schools.com/html/" target="_blank">
+        Aprender más sobre HTML
+      </a>
+    </section>
+
   </main>
 
   <footer>
-    <p>© 2025 - Mi Proyecto</p>
+    <p>Estudiante: Julia Tipán | Asignatura: Desarrollo de App Web</p>
   </footer>
+
 </body>
 </html>
