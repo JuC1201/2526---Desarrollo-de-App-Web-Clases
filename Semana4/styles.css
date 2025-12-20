@@ -1,0 +1,32 @@
+/* BOTÓN PERSONALIZADO */
+.btn-primary {
+    background-color: #ff5733;
+    border: none;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+/* TARJETAS */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+    body {
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        color: #ff5733;
+    }
+}
