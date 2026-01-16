@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+span {
+  color: rgb(0, 162, 255);
+  font-size: 12px;
+}
+
+.valido {
+  border: 2px solid rgb(229, 255, 0);
+}
+
+.invalido {
+  border: 2px solid rgb(0, 247, 255);
+}
