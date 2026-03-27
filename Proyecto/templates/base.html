@@ -1,0 +1,26 @@
+html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>{% block title %} Mi proyecto {%endblock%}</title>
+     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+ </head>
+ <body>
+    <header>
+        <nav>
+            <h1>Mi proyecto Web</h1>
+            <ul>
+                <li><a href="{{url_for('index')}}">Inicio</a></li>
+                <li><a href="{{url_for('about')}}">Acerca de</a></li>
+                <li><a href="{{url_for('contact')}}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2026 Mi proyecto Web. Todos los derechos reservados.</p>
+    </footer>
+ </body>
