@@ -1,26 +1,32 @@
-html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>{% block title %} Mi proyecto {%endblock%}</title>
-     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
- </head>
- <body>
-    <header>
-        <nav>
-            <h1>Mi proyecto Web</h1>
-            <ul>
-                <li><a href="{{url_for('index')}}">Inicio</a></li>
-                <li><a href="{{url_for('about')}}">Acerca de</a></li>
-                <li><a href="{{url_for('contact')}}">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Juli Flowers{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Juli Flowers</div>
+        <ul>
+            <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+            <li><a href="{{ url_for('contactos') }}">Contacto</a></li>
+            <li><a href="{{ url_for('productos') }}">Productos</a></li>
+            <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+            <li><a href="{{ url_for('pedidos') }}">Pedidos</a></li>
+            <li><a href="{{ url_for('reporte_pedidos') }}">Reporte PDF</a></li>
+            <li><a href="{{ url_for('logout') }}">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-principal">
+        {% block content %}{% endblock %}
+    </div>
+
     <footer>
-        <p>&copy; 2026 Mi proyecto Web. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Juli Flowers - Todos los derechos reservados</p>
+        <p>Latacunga - Provincia de Cotopaxi, Ecuador</p>
     </footer>
- </body>
+</body>
+</html>
