@@ -164,7 +164,7 @@ def clientes():
         clientes = Cliente.query.filter(
             (Cliente.nombre_cliente.like(f'%{buscar}%')) | 
             (Cliente.apellido_cliente.like(f'%{buscar}%')) |
-            (Cliente.dni_cliente.like(f'%{buscar}%'))
+            (Cliente.ci_cliente.like(f'%{buscar}%'))
         ).all()
     else:
         clientes = Cliente.query.all()
@@ -178,15 +178,15 @@ def nuevo_cliente():
         apellido = request.form['apellido']
         email = request.form['email']
         telefono = request.form['telefono']
-        dni = request.form['dni']
+        ci = request.form['ci']
         direccion = request.form['direccion']
         
         if Cliente.query.filter_by(email_cliente=email).first():
             flash('El correo ya está registrado', 'danger')
             return redirect(url_for('nuevo_cliente'))
         
-        if Cliente.query.filter_by(dni_cliente=dni).first():
-            flash('El DNI ya está registrado', 'danger')
+        if Cliente.query.filter_by(ci_cliente=ci).first():
+            flash('La CI ya está registrada', 'danger')
             return redirect(url_for('nuevo_cliente'))
         
         nuevo_cliente = Cliente(
@@ -194,7 +194,7 @@ def nuevo_cliente():
             apellido_cliente=apellido,
             email_cliente=email,
             telefono_cliente=telefono,
-            dni_cliente=dni,
+            ci_cliente=ci,
             direccion_cliente=direccion
         )
         db.session.add(nuevo_cliente)
@@ -215,7 +215,7 @@ def editar_cliente(id):
         cliente.apellido_cliente = request.form['apellido']
         cliente.email_cliente = request.form['email']
         cliente.telefono_cliente = request.form['telefono']
-        cliente.dni_cliente = request.form['dni']
+        cliente.ci_cliente = request.form['ci']
         cliente.direccion_cliente = request.form['direccion']
         
         db.session.commit()
